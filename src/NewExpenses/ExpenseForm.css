@@ -1,0 +1,27 @@
+.expense-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .expense-form-content label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .expense-form-content input {
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 20rem;
+  }
+  
+  .button-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }

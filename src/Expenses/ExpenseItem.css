@@ -1,0 +1,46 @@
+.expense-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border-radius: 12px;
+    background-color: #088d5e;
+    height: 10vh;
+}
+
+.expenseItem-content{
+  display: flex;
+  flex: 1;
+}
+
+.expenseItem-amount {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: white;
+  background-color: #40409b;
+  border: none;
+  height: 40px;
+  margin: auto;
+  padding: .6rem;
+  border-radius: 10px;
+  }
+  
+  .expense-item h2 {
+    color: #3a3a3a;
+    font-size: 1.6rem;
+    flex: 1;
+    margin-left: 30px;
+    color: white;
+  }
+  
+  .fa-trash-o{
+    padding: 1.2rem;
+    font-size: 27px;
+    cursor: pointer;
+  }
+
+  .fa-trash-o:hover{
+    color: white;
+  }
