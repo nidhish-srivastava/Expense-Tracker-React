@@ -39,8 +39,28 @@
     padding: 1.2rem;
     font-size: 27px;
     cursor: pointer;
+    position: relative;
+    margin-left: 10rem;
   }
 
   .fa-trash-o:hover{
     color: white;
+  }
+
+  @media (max-width:600px) {
+    .expense-item{
+      flex-direction: column;
+      height: 13rem;
+    }
+    .expense-item h2{
+      font-size: 2rem;
+      margin-right: 1rem;
+    }
+    .fa-trash-o{
+      position: absolute;
+      right: 1.8rem;
+      bottom: 6rem;
+      margin-left: -1rem;
+    }
+
   }

@@ -3,7 +3,7 @@
     background-color: rgb(10, 142, 208);
     margin: 2rem auto;
     width: 50rem;
-    max-width: 90%;   /* For responsive part*/
+    /* width: 90%; */
     border-radius: 20px;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
   }
@@ -14,4 +14,9 @@
     margin-top: 40px;
     font-weight: 600;
     color: rgb(38, 38, 33);
+  }
+  @media (max-width:600px) {
+    .MainContainer{
+      width: 32rem;
+    }
   }

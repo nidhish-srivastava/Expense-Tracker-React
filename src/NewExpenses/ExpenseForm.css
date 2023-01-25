@@ -25,3 +25,17 @@
     justify-content: flex-end;
     gap: 10px;
   }
+
+  
+@media (max-width:850px) {
+   .expense-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .button-actions{
+      justify-content: center;    
+      margin-top: 2rem;
+   }
+}
+ 
