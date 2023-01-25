@@ -15,8 +15,19 @@
     font-weight: 600;
     color: rgb(38, 38, 33);
   }
-  @media (max-width:600px) {
+  @media (min-width:850px) {
     .MainContainer{
       width: 32rem;
+    }
+  }
+
+@media (min-width:1200px) {
+  .MainContainer{
+    width: 50rem;
+  }
+}
+  @media (max-width:500px) {
+    .MainContainer{
+   width:20rem;
     }
   }

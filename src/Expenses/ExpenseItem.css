@@ -47,7 +47,7 @@
     color: white;
   }
 
-  @media (max-width:600px) {
+  @media (max-width:500px) {
     .expense-item{
       flex-direction: column;
       height: 13rem;
@@ -58,7 +58,7 @@
     }
     .fa-trash-o{
       position: absolute;
-      right: 1.8rem;
+      right: 5rem;
       margin-left: -1rem;
     }
 

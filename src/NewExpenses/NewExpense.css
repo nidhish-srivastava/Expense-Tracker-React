@@ -25,7 +25,7 @@
 }
 
 
-@media (max-width:850px) {
+@media (min-width:850px) {
   .new-expense{
     width: 40rem;
     display: flex;
@@ -33,9 +33,16 @@
     align-items: center;
   }
 }
- 
-@media (max-width:600px) {
+
+@media (min-width:1200px) {
   .new-expense{
-   width: 34rem;
+    width: 50rem;
+  }
+}
+ 
+@media (max-width:500px) {
+  .new-expense{
+   width:20rem;
  } 
 } 
+
