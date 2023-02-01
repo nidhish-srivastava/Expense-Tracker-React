@@ -8,11 +8,8 @@ function App() {
   const [expense, setExpense] = useState(JSON.parse(localStorage.getItem('expense'))|| [])
 
 
-  const itemHandler = (e) => {
-
-    setExpense((event) => {
-      return [e, ...event]
-    })
+  const itemHandler = (data) => {
+    setExpense(data)
   }
   const deleteExpenseHandler = (e) => {
     const n = expense.filter((arr, index) => index != e)
@@ -23,7 +20,7 @@ function App() {
 
   return (
     <React.Fragment>
-      <NewExpense data={itemHandler} />
+      <NewExpense itemHandler={itemHandler} />
       <Expenses itemsArray={expense} deleteExpenseHandler={deleteExpenseHandler} />
     </React.Fragment>
   );

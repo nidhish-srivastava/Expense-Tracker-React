@@ -10,6 +10,7 @@ function Expenses(props) {
 
   const filteredYearData = props.itemsArray
 
+
   // const filteredYearData = props.itemsArray.filter(event => {
   //   const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
   //   // console.log(month[event.date.getMonth()])
@@ -24,7 +25,16 @@ function Expenses(props) {
       {/* {props.itemsArray.map((e)=>(<ExpenseItem key={e.id} date={e.date} amount={e.amount} title={e.title} />))} */}
 
       {filteredYearData.length === 0 && <p>No Expenses Found !!</p>}
-      {filteredYearData.length > 0 && filteredYearData.map((e, index) => (<ExpenseItem key={index} date={e.date} id={index} amount={e.amount} title={e.title} deleteExpense={props.deleteExpenseHandler} />))}
+      {filteredYearData.length > 0 && filteredYearData.map((e, index) => (
+        <ExpenseItem
+          key={index}
+          date={typeof e.date === 'string' ? new Date(Date.parse(e.date)) : e.date}
+          id={index}
+          amount={e.amount}
+          title={e.title}
+          deleteExpense={props.deleteExpenseHandler}
+        />
+      ))}
 
 
     </div>
