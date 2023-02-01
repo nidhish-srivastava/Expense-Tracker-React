@@ -8,14 +8,14 @@ function Expenses(props) {
 
   const [filteredMonth, setFilteredMonth] = useState('January')
 
-  const filteredYearData = props.itemsArray
+  // const filteredYearData = props.itemsArray
 
-
-  // const filteredYearData = props.itemsArray.filter(event => {
-  //   const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-  //   // console.log(month[event.date.getMonth()])
-  //   return  === filteredMonth;   // Accessing the data property of the object(which is inside array)
-  // })
+  const filteredYearData = props.itemsArray.filter(event => {
+    const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    const monthNumber = typeof event.date === 'string' ? new Date(Date.parse(event.date)) : event.date
+    const monthName = (month[monthNumber.getMonth()])
+    return monthName === filteredMonth;   // Accessing the data property of the object(which is inside array)
+  })
 
   return (
     <div className='MainContainer'>
