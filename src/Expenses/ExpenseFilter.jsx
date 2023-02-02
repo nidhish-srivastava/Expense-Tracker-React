@@ -7,7 +7,7 @@ function ExpenseFilter(props) {
   }
   return (   
       <div className='filter'>
-      <label>Filter by year</label>
+      <label>Filter by month</label>
       <select value= {props.default} onChange={dropdownChangeHandler}>  {/*  Listening to a event,by pointing it to a function,this function will access the props(i.e.,onChangeFilter) passed from Expenses*/}
         <option value='January'>Jan</option>
         <option value='February'>Feb</option>
