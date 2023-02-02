@@ -5,7 +5,7 @@ import NewExpense from "./NewExpenses/NewExpense"
 
 function App() {
 
-  const [expense, setExpense] = useState(JSON.parse(localStorage.getItem('expense'))|| [])
+  const [expense, setExpense] = useState(JSON.parse(localStorage.getItem('expense')) || [])
 
 
   const itemHandler = (data) => {
@@ -13,7 +13,10 @@ function App() {
   }
   const deleteExpenseHandler = (e) => {
     const n = expense.filter((arr, index) => index != e)
+
     setExpense(n)
+    const saveData = JSON.stringify(n);
+    localStorage.setItem('expense', saveData);
   }
 
   console.log(expense)
