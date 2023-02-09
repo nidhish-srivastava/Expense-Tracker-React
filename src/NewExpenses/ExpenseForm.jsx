@@ -11,18 +11,20 @@ function ExpenseForm(props) {
   const formSubmitHandler = (event) =>{
     event.preventDefault()
 
-    const obj = {
-      title:enteredTitle,
-      amount:enteredAmount,
-      date:new Date(enteredDate),
-      // id: Math.random().toString()
+    if(enteredAmount && enteredDate && enteredTitle){
+      const obj = {
+        title:enteredTitle,
+        amount:enteredAmount,
+        date:new Date(enteredDate),
+        // id: Math.random().toString()
+      }
+  
+      props.output(obj)
+
+      setEnteredAmount('')
+      setEnteredDate('')
+      setEnteredTitle('')
     }
-
-    props.output(obj)
-
-    setEnteredAmount('')
-    setEnteredDate('')
-    setEnteredTitle('')
   }
 
 
