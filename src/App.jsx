@@ -6,6 +6,15 @@ import NewExpense from "./NewExpenses/NewExpense"
 function App() {
 
   const [expense, setExpense] = useState(JSON.parse(localStorage.getItem('expense')) || [])
+  
+  
+const sum = expense.reduce((accumulator,object)=>{
+     return Number(Number(accumulator)+Number(object.amount))
+},0)
+
+console.log(sum)
+
+
 
 
   const itemHandler = (data) => {
@@ -23,6 +32,8 @@ function App() {
 
   return (
     <React.Fragment>
+          <span className="bill">Total : ₹{sum}</span>
+
       <NewExpense itemHandler={itemHandler} />
       <Expenses itemsArray={expense} deleteExpenseHandler={deleteExpenseHandler} />
     </React.Fragment>
