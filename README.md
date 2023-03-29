@@ -9,3 +9,5 @@ Features :
 * Expenses are filtered based on each month of the year
 
 * Delete an expense
+
+* Data is stored inside local storage
