@@ -17,6 +17,11 @@ function Expenses(props) {
     return monthName === filteredMonth;   // Accessing the data property of the object(which is inside array)
   })
 
+  
+  //* Sorting the expenses according to the date in each month
+  const itemsInOrder = filteredYearData.slice().sort((a,b)=>b.date.localeCompare(a.date))
+
+
   return (
     <div className='MainContainer'>
       <ExpenseFilter onChangeYear={(event) => { setFilteredMonth(event) }} default={filteredMonth} />
@@ -25,7 +30,8 @@ function Expenses(props) {
       {/* {props.itemsArray.map((e)=>(<ExpenseItem key={e.id} date={e.date} amount={e.amount} title={e.title} />))} */}
 
       {filteredYearData.length === 0 && <p>No Expenses Found !!</p>}
-      {filteredYearData.length > 0 && filteredYearData.map((e, index) => (
+      {/* {filteredYearData.length > 0 && filteredYearData.map((e, index) => ( */}
+      {itemsInOrder.length > 0 && itemsInOrder.map((e, index) => (
         <ExpenseItem
           key={index}
           date={typeof e.date === 'string' ? new Date(Date.parse(e.date)) : e.date}
