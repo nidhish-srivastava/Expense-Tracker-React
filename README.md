@@ -6,7 +6,7 @@ Features :
 
 * See the total amount of all your expenses throughout the year
 
-* Expenses are filtered based on each month of the year
+* Expenses are filtered based on each month of the year,as well as according to date in a particular month
 
 * Delete an expense
 
