@@ -9,7 +9,7 @@ function App() {
   
   
 const sum = expense.reduce((accumulator,object)=>{
-     return Number(Number(accumulator)+Number(object.amount))
+     return Number(Number(accumulator)+Number(object.amount))  // we have array of objects,not just elements with amount,so we will select the amount property of each object of the array,then find the sum of it
 },0)
 
 console.log(sum)
