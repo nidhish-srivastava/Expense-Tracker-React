@@ -1,0 +1,23 @@
+.filter{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    color: white;
+    padding: 0 1rem;
+ }
+ 
+ .filter label {
+     font-weight: bold;
+     margin-bottom: 0.5rem;
+     font-size: 24px;
+ }
+ 
+ .filter select {
+     margin-right: 14px;
+     padding: 14px 30px;
+     outline: none;
+     font-weight: bold;
+     border-radius: 20px;
+     font-size: 18px;
+ }
